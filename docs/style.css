@@ -6,11 +6,6 @@ body {
   height: 100%;
   box-sizing: border-box; 
   font-family: 'Open Sans', sans-serif;
-  /* height: 90%; */
-  /* color: #000; */
-  /* background-color: #efefef; */
-  /* text-align: center; */
-  /* vertical-align: middle; */
 }
 
 section {
@@ -19,18 +14,12 @@ section {
   position: absolute;
   background-image: url("image/poster.png");
   background-size: 100% 100%;
-  /* background-repeat: no-repeat; */
 }
 
 p {
-  /* padding-top: auto;
-  padding-bottom: auto; */
   position: relative;
   overflow: hidden;
-  /*     overflow-x:auto; */
-  /*     background: white; */
-  /* font-size: 1.2rem; */
-  /* line-height: 1.5rem; */
+  overflow-x:auto;
 }
 
 #prompt {
