@@ -1,81 +1,57 @@
 html,
 body {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0;
+  padding: 0;
   width: 100%;
-  color: #000;
-  background-color: #efefef;
-  height: 90%;
-  text-align: center;
-  vertical-align: middle;
+  height: 100%;
+  box-sizing: border-box; 
+  font-family: 'Open Sans', sans-serif;
+  /* height: 90%; */
+  /* color: #000; */
+  /* background-color: #efefef; */
+  /* text-align: center; */
+  /* vertical-align: middle; */
 }
 
-a{
-  color:#146;
+section {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("image/poster.png");
+  background-size: 100% 100%;
+  /* background-repeat: no-repeat; */
 }
 
-#permalink {
-  display: none;
-}
-
-.wrap{
-  white-space: normal;
+p {
+  /* padding-top: auto;
+  padding-bottom: auto; */
+  position: relative;
+  overflow: hidden;
+  /*     overflow-x:auto; */
+  /*     background: white; */
+  /* font-size: 1.2rem; */
+  /* line-height: 1.5rem; */
 }
 
 #prompt {
   display: flex;
+  justify-content: center;
   overflow-x: auto;
-  white-space: nowrap;
-  height: 80%;
-  margin-top: auto;
-  margin-bottom: auto;
-  text-align: center;
-  vertical-align: middle;
+  margin-top: 18%;
+  margin-left: -8rem; 
+  overflow: hidden;
 }
 
 .promptSegment {
-  /* height: 80%; */
   display: inline-block;
   padding: 2%;
   text-align: center;
   vertical-align: middle;
-  /*     height: auto; */
-  /*     padding-top: auto;
-    padding-bottom: auto; */
-}
-
-button {
-  background: #911;
-  cursor: pointer;
-  box-shadow: 1px 1px 3px 2px #511;
-  color: white;
-  border-width: 0px;
-  border-radius: 10%;
-  padding: 5%;
-  margin-top: 2%;
-  margin-left: auto;
-  margin-right: auto;
-
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1.5em;
-}
-
-p {
-  /*     padding-top: auto;
-    padding-bottom: auto; */
-  position: relative;
-  font-size: 1.2em;
-  overflow: hidden;
-  /*     overflow-x:auto; */
-  /*     background: white; */
-  /*     line-height:1em; */
 }
 
 .changingSegment {
   /*     h-offset v-offset blur spread color */
-  box-shadow: 1px 1px 3px 2px #000 inset;
+  box-shadow: 1px 1px 2px 1px #666 inset;
   border-radius: 5%;
   border-style: groove;
   border-color: gray;
@@ -84,17 +60,39 @@ p {
   overflow: none;
   background-color: #fff;
   color: black;
-  width: 15%;
-  height:16em;
+  width: 13%;
+  height: 15em;
   padding-top: 3em;
   padding-right: 2%;
-  /*     max-height: 10%;
-    width: 20%;
-    height: 20%; */
-  /* overflow: hidden; */
+  padding-bottom: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.52rem;
 }
 
 .staticSegment{
   margin-top: auto;
   margin-bottom: auto;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  color: #5cb6ed;
 }
+
+#spinner {
+  text-align: center;
+}
+
+button {
+  background: #fa82be;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px 1px rgb(157, 85, 85);
+  color: white;
+  border-width: 0px;
+  border-radius: 10%;
+  padding: 1% 4% 1% 4%;
+  margin-top: 5%;
+  margin-left: 12%;
+  font-size: 1.5em;
+}
+
+
+

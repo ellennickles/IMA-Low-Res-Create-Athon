@@ -11,10 +11,10 @@ let outputs = [];
 let currentOutput, currentInput; 
 
 // number of items in slot machine window
-// an odd number is recommended for a clear midpoint
+// an odd number recommended for a clear midpoint
 let itemsInSlotWindow = 5;
 
-// we will be using position of element to move things
+// use position of element to move things
 let slotWindowStartPos;
 let distBetweenItemsInWindow;
 
@@ -25,11 +25,14 @@ let resourcesAvailable = false;
 
 function preload() {
   data = loadJSON('data/generator.json');
-
   //sounds are public domain
   clickSound = loadSound('sound/faded_sine.mp3');
   endSound = loadSound('sound/Electronic_Chime-KevanGC-495939803.mp3');
   gameShow = loadSound('sound/gameshow_short.mp3');
+}
+
+function windowResized(){
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 function setup() {
@@ -65,6 +68,7 @@ function setup() {
 }
 
 function draw() {
+
   if (inputWheel.spin) {
     inputWheel.move();
   }
@@ -73,13 +77,9 @@ function draw() {
   }
 
   if(isSpinning){
-    // select('#permalink').hide();
-
     if(inputWheel.difference == 0 && outputWheel.difference == 0){
       endSound.play();
       setTimeout(() => {  gameShow.play(); }, 300);
-      
-      // select('#permalink').show();
       isSpinning = false;
     }
   }
@@ -102,15 +102,10 @@ function startSpin(
   outputWheel.spin = true;
   outputWheel.resetAriaHidden();
 
-  // let permalink = `?input=${targetInput}&output=${targetOutput}`;
-  // console.log(permalink);
-
-  // select('#permalink').attribute('href', permalink);
-
-  console.log(
-    'make a something where the input is ' +
-      data.input[targetInput] +
-      ' and an output is ' +
-      data.output[targetOutput]
-  );
+  // console.log(
+  //   'make a something where the input is ' +
+  //     data.input[targetInput] +
+  //     ' and an output is ' +
+  //     data.output[targetOutput]
+  // );
 }

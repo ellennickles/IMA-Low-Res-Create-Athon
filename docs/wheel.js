@@ -2,7 +2,7 @@ class Wheel {
     constructor(parentID, data, count = 5, startIndex = 0) {
         this.count = count;
         this.data = data;
-        this.numOfCycles = 2
+        this.numOfCycles = Math.floor(random(2,4));
         this.startIndex = startIndex;
         this.currentIndex = this.startIndex - this.data.length*this.numOfCycles;
         this.parentID = parentID;
