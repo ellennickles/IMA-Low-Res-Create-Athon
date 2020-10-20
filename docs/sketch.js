@@ -29,13 +29,14 @@ function preload() {
   //sounds are public domain
   clickSound = loadSound('sound/faded_sine.mp3');
   endSound = loadSound('sound/Electronic_Chime-KevanGC-495939803.mp3');
-  gameShow = loadSound('sound/gameshow.mp3');
+  gameShow = loadSound('sound/gameshow_short.mp3');
 }
 
 function setup() {
   frameRate(60);
  
   clickSound.setVolume(0.4);
+  gameShow.setVolume(0.5);
 
   inputWheel = new Wheel(
     '#inputs',

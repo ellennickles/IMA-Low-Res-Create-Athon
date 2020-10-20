@@ -2,7 +2,7 @@ class Wheel {
     constructor(parentID, data, count = 5, startIndex = 0) {
         this.count = count;
         this.data = data;
-        this.numOfCycles = floor(random(2,5));
+        this.numOfCycles = 2
         this.startIndex = startIndex;
         this.currentIndex = this.startIndex - this.data.length*this.numOfCycles;
         this.parentID = parentID;
@@ -43,7 +43,7 @@ class Wheel {
         this.currTop -= this.speed;
 
         this.difference = int(this.target) - int(this.currentIndex);
-        this.speed = 40 * abs((this.difference) % (this.data.length*this.numOfCycles*2)) / (this.data.length*this.numOfCycles*2);
+        this.speed = 60 * abs((this.difference) % (this.data.length*this.numOfCycles*2)) / (this.data.length*this.numOfCycles*2);
 
         // console.log(this.data[this.target],this.target, this.currentIndex, this.difference, (this.data.length*this.numOfCycles), this.speed);
         if (this.currTop < -this.distanceBetweenElements / 2) {
