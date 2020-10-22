@@ -63,7 +63,7 @@ class Wheel {
         }
           if (this.difference == 0) {
             this.spin = false;
-            this.numOfCycles = floor(random(2,5));
+            this.numOfCycles = floor(random(2,4));
             this.currentIndex = this.startIndex - this.data.length*this.numOfCycles;
             for (let i = 0; i < this.elements.length; i++) {
                 if (i == floor(this.elements.length / 2)) {

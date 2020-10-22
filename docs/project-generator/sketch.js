@@ -1,30 +1,10 @@
 let spinButton;
-let data, resourceData;
-
-let inputSection;
-
+let data
 let inputWheel, outputWheel;
-
-let inputs = [];
-let outputs = [];
-
-let currentOutput, currentInput; 
-
-// number of items in slot machine window
-// an odd number recommended for a clear midpoint
-let itemsInSlotWindow = 5;
-
-// use position of element to move things
-let slotWindowStartPos;
-let distBetweenItemsInWindow;
-
 let clickSound, endSound, gameShow;
-
 let isSpinning = false;
 let resourcesAvailable = false;
 
-let backgroundImgs = [];
-let totalImgs = 3;
 
 function preload() {
   data = loadJSON('data/generator.json');
@@ -46,25 +26,16 @@ function setup() {
 
   inputWheel = new Wheel(
     '#inputs',
-    data.input,
-    itemsInSlotWindow,
-    floor(data.input.length + random(data.input.length))
+    data.input
+    // itemsInSlotWindow,
+    // floor(data.input.length + random(data.input.length))
   );
   outputWheel = new Wheel(
     '#outputs',
-    data.output,
-    itemsInSlotWindow,
-    floor(data.output.length + random(data.output.length))
+    data.output
+    // itemsInSlotWindow,
+    // floor(data.output.length + random(data.output.length))
   );
-
-  let params = getURLParams();
-  console.log(params);
-
-  // startSpin(
-  //   null,
-  //   (params.input)?params.topic:floor(random(data.input.length)),
-  //   (params.output)?params.output:floor(random(data.output.length)),
-  // );
 
   spinButton = select('button');
   spinButton.mouseClicked(startSpin);
