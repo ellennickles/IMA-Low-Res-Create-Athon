@@ -24,7 +24,6 @@ class Wheel {
                 this.elements[i].style('visibility', 'hidden');
             }
         }
-
         // this feels hacky?
         this.startTop = this.position[0].y;
         this.currTop = parseInt(this.elements[0].style('top'));

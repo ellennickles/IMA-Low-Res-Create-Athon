@@ -12,26 +12,33 @@
 
 <body>
   <header>
-    <!-- <h1>IMA Low Res Create-Athon</h1> -->
+
   </header>
   
   <section>
 
-    <div id="prompt">
-      <div class="promptSegment staticSegment">
-        <p>The input is</p>
+    <div id="wheel-container">
+
+      <div class="prompt" id="input-prompt">
+      <div class="changing-segment" >
+          <div id="inputs">
+          </div>
+        </div>
+        <div class="prompt-label" id="input-label">Input</div>
       </div>
-      <div id="inputs" class="promptSegment changingSegment">
+
+      <div class="prompt" id="output-prompt">
+      <div class="changing-segment">
+        <div id="outputs">
+        </div>
       </div>
-      <div class="promptSegment staticSegment">
-        <p>and the output is </p>
+      <div class="prompt-label" id="output-label">Output</div>
       </div>
-      <div id="outputs" class="promptSegment changingSegment">
-      </div>
+
     </div>
 
-    <div id="spinner">
-      <button> Spin! </button>
+    <div id="button-container">
+      <button> Spin the Wheels! </button>
     </div>
 
   </section>
@@ -41,7 +48,6 @@
   </footer>
   <script src="sketch.js"></script>
   <script src="wheel.js"></script>
-
 
 </body>
 

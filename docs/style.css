@@ -12,35 +12,34 @@ section {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-image: url("image/poster.png");
+  background-image: url("image/poster2.png");
   background-size: 100% 100%;
 }
 
 p {
   position: relative;
   overflow: hidden;
-  overflow-x:auto;
+  overflow-x: auto;
 }
 
-#prompt {
+#wheel-container {
   display: flex;
   justify-content: center;
-  overflow-x: auto;
-  margin-top: 18%;
-  margin-left: -8rem; 
+  margin-top: 20%;
   overflow: hidden;
 }
 
-.promptSegment {
-  display: inline-block;
+.prompt {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
   padding: 2%;
   text-align: center;
-  vertical-align: middle;
+  overflow: hidden;
 }
 
-.changingSegment {
-  /*     h-offset v-offset blur spread color */
-  box-shadow: 1px 1px 2px 1px #666 inset;
+.changing-segment {
+  box-shadow: 1px 1px 1.5px 1px #777 inset;
   border-radius: 5%;
   border-style: groove;
   border-color: gray;
@@ -49,38 +48,40 @@ p {
   overflow: none;
   background-color: #fff;
   color: black;
-  width: 13%;
-  height: 15em;
-  padding-top: 3em;
-  padding-right: 2%;
-  padding-bottom: 1rem;
+  height: 17rem;
+  padding: 1rem 0 0.5rem 0;
   font-size: 1.2rem;
-  line-height: 1.52rem;
+  line-height: 1.55rem;
 }
 
-.staticSegment{
-  margin-top: auto;
-  margin-bottom: auto;
-  font-size: 1.8rem;
-  line-height: 2.5rem;
-  color: #5cb6ed;
+#inputs,
+#outputs {
+  padding: 5%;
 }
 
-#spinner {
+.prompt-label {
+  color: #594042;
+  margin-top: 0.3rem;
+  font-size: 1.6rem;
+}
+
+#button-container {
+  margin-top: 1%;
   text-align: center;
 }
 
 button {
   background: #fa82be;
+  /* background: #96c8dc; */
   cursor: pointer;
-  box-shadow: 1px 1px 2px 1px rgb(157, 85, 85);
+  box-shadow: 1px 1px 2px 1px rgb(148, 79, 79);
   color: white;
   border-width: 0px;
-  border-radius: 10%;
-  padding: 1% 4% 1% 4%;
-  margin-top: 5%;
-  margin-left: 12%;
-  font-size: 1.5em;
+  border-radius: 0.5rem;
+  padding: 0.8% 10% 0.8% 10%;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-style: italic;
 }
 
 

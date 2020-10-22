@@ -23,12 +23,15 @@ let clickSound, endSound, gameShow;
 let isSpinning = false;
 let resourcesAvailable = false;
 
+let backgroundImgs = [];
+let totalImgs = 3;
+
 function preload() {
   data = loadJSON('data/generator.json');
   //sounds are public domain
   clickSound = loadSound('sound/faded_sine.mp3');
   endSound = loadSound('sound/Electronic_Chime-KevanGC-495939803.mp3');
-  gameShow = loadSound('sound/gameshow_short.mp3');
+  gameShow = loadSound('sound/gameshow_short.mp3'); 
 }
 
 function windowResized(){
@@ -57,11 +60,11 @@ function setup() {
   let params = getURLParams();
   console.log(params);
 
-  startSpin(
-    null,
-    (params.input)?params.topic:floor(random(data.input.length)),
-    (params.output)?params.output:floor(random(data.output.length)),
-  );
+  // startSpin(
+  //   null,
+  //   (params.input)?params.topic:floor(random(data.input.length)),
+  //   (params.output)?params.output:floor(random(data.output.length)),
+  // );
 
   spinButton = select('button');
   spinButton.mouseClicked(startSpin);
@@ -91,7 +94,6 @@ function startSpin(
   targetInput = floor(random(data.input.length)),
   targetOutput = floor(random(data.output.length)),
 ) {
-
   isSpinning = true;
 
   inputWheel.target = targetInput;
