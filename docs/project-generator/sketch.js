@@ -27,14 +27,10 @@ function setup() {
   inputWheel = new Wheel(
     '#inputs',
     data.input
-    // itemsInSlotWindow,
-    // floor(data.input.length + random(data.input.length))
   );
   outputWheel = new Wheel(
     '#outputs',
     data.output
-    // itemsInSlotWindow,
-    // floor(data.output.length + random(data.output.length))
   );
 
   spinButton = select('button');
