@@ -12,7 +12,7 @@ section {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-image: url("image/poster2.png");
+  background-image: url("image/poster.png");
   background-size: 100% 100%;
 }
 
@@ -25,7 +25,7 @@ p {
 #wheel-container {
   display: flex;
   justify-content: center;
-  margin-top: 20%;
+  margin-top: 19%;
   overflow: hidden;
 }
 
@@ -48,8 +48,8 @@ p {
   overflow: none;
   background-color: #fff;
   color: black;
-  height: 17rem;
-  padding: 1rem 0 0.5rem 0;
+  height: 15rem;
+  padding: 1rem 0 2rem 0;
   font-size: 1.2rem;
   line-height: 1.55rem;
 }
@@ -59,8 +59,13 @@ p {
   padding: 5%;
 }
 
+/* #outputs {
+  font-size: 2rem;
+  line-height: 2rem;
+} */
+
 .prompt-label {
-  color: #594042;
+  color: #fff;
   margin-top: 0.3rem;
   font-size: 1.6rem;
 }
@@ -71,10 +76,10 @@ p {
 }
 
 button {
-  background: #fa82be;
+  background: #70cafa;
   /* background: #96c8dc; */
   cursor: pointer;
-  box-shadow: 1px 1px 2px 1px rgb(148, 79, 79);
+  box-shadow: 1px 1px 2px 1px #4882a0;
   color: white;
   border-width: 0px;
   border-radius: 0.5rem;
