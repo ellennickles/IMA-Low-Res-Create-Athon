@@ -1,5 +1,5 @@
 let spinButton;
-let data
+let data;
 let inputWheel, outputWheel;
 let clickSound, endSound, gameShow;
 let isSpinning = false;
@@ -80,5 +80,8 @@ function startSpin(
   //     data.output[targetOutput]
   // );
 
-  // console.log(data.input);
+  // remove data point here?
+  console.log(data.input[targetInput]);
+  data.input.splice(targetInput, 1);
+  console.log(data.input);
 }

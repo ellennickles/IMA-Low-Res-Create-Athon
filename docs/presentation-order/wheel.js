@@ -42,18 +42,20 @@ class Wheel {
         this.currTop -= this.speed;
 
         this.difference = int(this.target) - int(this.currentIndex);
-        this.speed = 60 * abs((this.difference) % (this.data.length*this.numOfCycles*2)) / (this.data.length*this.numOfCycles*2);
+        this.speed = 60 * abs((this.difference) % (this.data.length * this.numOfCycles * 2)) / (this.data.length*this.numOfCycles * 2);
 
         // console.log(this.data[this.target],this.target, this.currentIndex, this.difference, (this.data.length*this.numOfCycles), this.speed);
+
         if (this.currTop < -this.distanceBetweenElements / 2) {
             clickSound.play();
             this.currentIndex++;
-            this.startIndex = this.currentIndex + this.data.length*this.numOfCycles;
+            this.startIndex = this.currentIndex + this.data.length * this.numOfCycles;
             this.startIndex %= this.data.length;
             this.elements[0].remove();
             this.currTop = 0;
             this.elements.splice(0, 1);
             this.elements.push(createP(this.data[(this.data.length + this.startIndex + floor(this.count / 2)) % this.data.length]));
+            
             this.elements[this.elements.length - 1].parent(this.parentID);
             this.elements[this.elements.length - 1].attribute('aria-hidden', true);
             this.elements[this.elements.length - 1].style('color', rgbToHex(int(random(120)), int(random(120)), int(random(120))));
@@ -63,6 +65,9 @@ class Wheel {
         }
           if (this.difference == 0) {
             this.spin = false;
+
+            console.log(`wheel ${this.data}`);    
+
             this.numOfCycles = floor(random(2,4));
             this.currentIndex = this.startIndex - this.data.length*this.numOfCycles;
             for (let i = 0; i < this.elements.length; i++) {
