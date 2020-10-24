@@ -38,9 +38,22 @@ class Wheel {
             this.elements[i].style('visibility', 'visible');
         }
     }
+
+    // continuing the hack workaround
+    update(target) {
+        console.log(data.input[target]);
+        let inputWheel = document.getElementById("inputs");
+        inputWheel.innerHTML = data.input[target];
+        inputWheel.style.position = "relative";
+        inputWheel.style.top = "45%"
+        this.spin = false;
+
+    }
+
     move() {
         this.currTop -= this.speed;
-
+        // console.log(this.target);
+        // console.log(this.currentIndex);
         this.difference = int(this.target) - int(this.currentIndex);
         this.speed = 60 * abs((this.difference) % (this.data.length * this.numOfCycles * 2)) / (this.data.length*this.numOfCycles * 2);
 
