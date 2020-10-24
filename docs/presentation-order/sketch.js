@@ -39,9 +39,10 @@ function setup() {
 
 function draw() {
 
-  if (inputWheel.spin) {
-    inputWheel.move();
-  }
+  // workaround, see line 69
+  // if (inputWheel.spin) {
+  //   // inputWheel.move();
+  // }
   if (outputWheel.spin) {
     outputWheel.move();
   }
@@ -65,9 +66,10 @@ function startSpin(
 ) {
   isSpinning = true;
 
-  inputWheel.target = targetInput;
-  inputWheel.spin = true;
-  inputWheel.resetAriaHidden();
+  // inputWheel.target = targetInput; // not the target that displays!!
+  // inputWheel.spin = true;
+  inputWheel.update(targetInput);
+  // inputWheel.resetAriaHidden();
 
   outputWheel.target = targetOutput;
   outputWheel.spin = true;
@@ -80,7 +82,7 @@ function startSpin(
   //     data.output[targetOutput]
   // );
 
-  // remove data point here?
+  // remove data from array here
   console.log(data.input[targetInput]);
   data.input.splice(targetInput, 1);
   console.log(data.input);
