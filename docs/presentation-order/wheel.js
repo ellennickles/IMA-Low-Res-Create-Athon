@@ -66,7 +66,7 @@ class Wheel {
           if (this.difference == 0) {
             this.spin = false;
 
-            console.log(`wheel ${this.data}`);    
+            console.log(this.data);    
 
             this.numOfCycles = floor(random(2,4));
             this.currentIndex = this.startIndex - this.data.length*this.numOfCycles;

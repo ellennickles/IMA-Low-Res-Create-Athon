@@ -11,7 +11,7 @@ function preload() {
   clickSound = loadSound('sound/faded_sine.mp3');
   endSound = loadSound('sound/Electronic_Chime-KevanGC-495939803.mp3');
   // maybe not this sound?
-  gameShow = loadSound('sound/gameshow.mp3'); 
+  gameShow = loadSound('sound/gameshow_short.mp3'); 
 }
 
 function windowResized(){
